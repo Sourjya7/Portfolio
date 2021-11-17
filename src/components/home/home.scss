@@ -1,0 +1,32 @@
+@mixin flex($par) {
+  display: flex;
+  justify-content: $par;
+  align-items: center;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 5rem 1fr 1fr 5rem;
+  .desc {
+    grid-column: 2/3;
+    @include flex(center);
+    flex-direction: column;
+  }
+  .pic {
+    @include flex(center);
+    grid-column: 3/4;
+    img {
+      height: 75%;
+      width: 85%;
+      border-radius: 20rem;
+    }
+  }
+}
+.homeLight {
+  background-color: rgb(209, 236, 236);
+}
+.homeDark {
+  background-color: rgba(0, 36, 36, 0.794);
+  color: white;
+}

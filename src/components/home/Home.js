@@ -1,10 +1,18 @@
 import React from "react";
+import pic from "../images/spmain.jpg";
+import "./home.scss";
 
-function Home() {
+function Home({ mode }) {
   return (
-    <div>
-      <h1>I am the Home page.</h1>
-    </div>
+    <main className={!mode ? "homeLight" : "homeDark"}>
+      <div className="desc">
+        <p>UI/UX DESIGNER & DEVELOPER</p>
+        <h3>I'm Sourjya Pal</h3>
+      </div>
+      <div className="pic">
+        <img src={pic} alt="" />
+      </div>
+    </main>
   );
 }
 

@@ -23,13 +23,13 @@ function App() {
       <Router>
         <Navbar mode={mode} toggleMode={toggleMode} />
         <Routes>
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About mode={mode} />} />
 
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<Projects mode={mode} />} />
 
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact mode={mode} />} />
 
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home mode={mode} />} />
         </Routes>
       </Router>
     </div>
