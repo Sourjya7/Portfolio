@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import "./about.scss";
+import pic from "../images/spmain.jpg";
+import { ques } from "./ques";
+import Accord from "./Accord";
 
 function About() {
+  const [data, setdata] = useState(ques);
   return (
-    <div>
-      <h1>I am the about page.</h1>
+    <div className="about">
+      <div className="pic">
+        <img src={pic} alt="" />
+      </div>
+      <div className="myData">
+        {data.map((question) => {
+          return <Accord key={question.id} {...question} />;
+        })}
+      </div>
     </div>
   );
 }

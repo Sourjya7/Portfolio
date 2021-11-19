@@ -5,28 +5,37 @@
 }
 
 main {
-  height: 100vh;
+  height: 93vh;
   display: grid;
   grid-template-columns: 5rem 1fr 1fr 5rem;
   .desc {
-    grid-column: 2/3;
     @include flex(center);
     flex-direction: column;
+    grid-column: 2/3;
+    p {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 3.5rem;
+    }
   }
   .pic {
     @include flex(center);
+    padding-top: 4rem;
     grid-column: 3/4;
     img {
-      height: 75%;
-      width: 85%;
-      border-radius: 20rem;
+      height: 30rem;
+      width: 30rem;
+      border-radius: 30rem;
     }
   }
 }
+
 .homeLight {
   background-color: rgb(209, 236, 236);
 }
+
 .homeDark {
-  background-color: rgba(0, 36, 36, 0.794);
+  background-color: rgb(59, 63, 63);
   color: white;
 }

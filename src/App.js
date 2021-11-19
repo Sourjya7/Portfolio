@@ -29,7 +29,7 @@ function App() {
 
           <Route path="/contact" element={<Contact mode={mode} />} />
 
-          <Route exact path="/" element={<Home mode={mode} />} />
+          <Route exact path="/Portfolio" element={<Home mode={mode} />} />
         </Routes>
       </Router>
     </div>

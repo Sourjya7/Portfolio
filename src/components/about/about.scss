@@ -1,0 +1,29 @@
+@mixin flex($par) {
+  display: flex;
+  justify-content: $par;
+  align-items: center;
+}
+.about {
+  display: grid;
+  grid-template-columns: 5rem 1fr 1fr 5rem;
+  .pic {
+    @include flex(flex-start);
+    padding-top: 4rem;
+    grid-column: 2/3;
+    img {
+      height: 30rem;
+      width: 30rem;
+      border-radius: 30rem;
+    }
+  }
+  .myData {
+    grid-column: 3/4;
+    @include flex(flex-start);
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 2rem;
+    border: 2px solid rgb(0, 36, 36);
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+}

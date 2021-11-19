@@ -5,8 +5,11 @@
 }
 
 nav {
+  position: sticky;
+  top: 0;
+  height: 3rem;
   padding: 0.3rem;
-  background-color: rgba(74, 197, 197, 0.746);
+  background-color: rgb(123, 218, 218);
   display: grid;
   grid-template-columns: 5rem 1fr 2fr 1fr 5rem;
 

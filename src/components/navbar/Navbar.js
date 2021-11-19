@@ -10,7 +10,7 @@ function Navbar({ mode, toggleMode }) {
       </p>
       <ul>
         <li>
-          <Link to="/" className="links">
+          <Link to="/Portfolio" className="links">
             Home
           </Link>
         </li>
