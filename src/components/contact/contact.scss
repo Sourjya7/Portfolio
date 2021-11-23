@@ -1,0 +1,24 @@
+@mixin flex($par) {
+  display: flex;
+  justify-content: $par;
+  align-items: center;
+}
+.main {
+  background-color: rgb(209, 236, 236);
+  min-height: 93vh;
+  display: grid;
+  grid-template-columns: 5rem 1fr 5rem;
+  .contact {
+    grid-column: 2/3;
+    display: block;
+    .headings {
+      padding: 2rem;
+      // border: 2px solid red;
+      @include flex(center);
+      flex-direction: column;
+    }
+    .handles {
+      @include flex(space-around);
+    }
+  }
+}

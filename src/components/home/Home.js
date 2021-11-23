@@ -1,4 +1,3 @@
-import React from "react";
 import pic from "../images/spmain.jpg";
 import "./home.scss";
 

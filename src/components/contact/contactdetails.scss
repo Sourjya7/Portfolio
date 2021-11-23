@@ -1,0 +1,36 @@
+@mixin flex($par) {
+  display: flex;
+  justify-content: $par;
+  align-items: center;
+}
+.details {
+  //   border: 3px solid red;
+  .ctr {
+    @include flex(center);
+    margin-right: 2rem;
+  }
+
+  .ct {
+    margin-bottom: 0.5rem;
+    @include flex(flex-start);
+    border-radius: 1rem;
+    background-color: rgb(193, 193, 209);
+
+    .icon {
+      width: 2.5rem;
+      aspect-ratio: 1;
+      background-color: gray;
+      border-radius: 50%;
+      @include flex(center);
+      margin: 1rem;
+    }
+
+    .content {
+      font-size: 1.2rem;
+      margin: 1rem;
+    }
+    svg {
+      font-size: 1.5rem;
+    }
+  }
+}

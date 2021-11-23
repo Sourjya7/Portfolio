@@ -4,19 +4,21 @@ import pic from "../images/spmain.jpg";
 import { ques } from "./ques";
 import Accord from "./Accord";
 
-function About() {
+function About({ mode }) {
   const [data, setdata] = useState(ques);
   return (
-    <div className="about">
-      <div className="pic">
-        <img src={pic} alt="" />
+    <main className={mode ? "darkAbout" : "lightAbout"}>
+      <div className="about">
+        <div className="pic">
+          <img src={pic} alt="" />
+        </div>
       </div>
       <div className="myData">
         {data.map((question) => {
-          return <Accord key={question.id} {...question} />;
+          return <Accord key={question.id} {...question} mode={mode} />;
         })}
       </div>
-    </div>
+    </main>
   );
 }
 
